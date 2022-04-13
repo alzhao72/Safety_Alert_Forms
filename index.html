@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="form_formatting.css">
+</head>
+
+<body>
+<form id="myForm" action="https://608dev-2.net/sandbox/sc/alzhao72/server.py" method="POST" enctype="application/x-www-form-urlencoded">
+  <fieldset>
+        <legend>SETUP OR UPDATE ACCOUNT</legend>
+        <div class="form-control">
+          <label for="user">- Username -</label>
+          <input 
+			type="user" 
+			id="user" 
+			name="user" 
+			placeholder="" 
+			required 
+		  />
+        </div>
+		
+		<div class="form-control">
+          <label for="name">Preferred Name</label>
+          <input
+            type="text"
+            id="name"
+			name = "name"
+            placeholder=""
+            required
+          />
+        </div>
+
+        <div class="form-control">
+          <label for="contact">Emergency Contact Email</label>
+          <input
+            type="text"
+            id="contact"
+			name = "contact"
+            placeholder=""
+            required
+          />
+        </div>
+		
+		<div class="form-control">
+          <label for="keyword">Phone Call Keyword(s)</label>
+         <textarea
+            rows="5"
+			id="keyword"
+			name = "keyword"
+            placeholder="Enter your keywords seperated by commas."
+            required
+          ></textarea>
+        </div>
+		
+		<div class="form-control">
+          <label for="prefs">Select Email Body Preference:</label>
+			<select id="prefs" name="prefs">
+			  <option value="1">Option 1</option>
+			  <option value="2">Option 2</option>
+			  <option value="3">Option 3</option>
+			</select>
+        </div>
+		
+		<input type="text" id="action" name = "action"/>
+
+		<script type="text/javascript">
+		document.getElementById("action").style.display = "none";
+		document.getElementById('action').value = 'set_settings';
+		</script>
+
+		<input type="submit" value="SUBMIT" class="submit-btn" />
+	</fieldset>
+</form>
+
+</body>
+</html>
